@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".presentation.application_form_activities.ApplicationFormActivity1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Информация об образовательной программе"
+            android:textSize="30sp"
+            android:textAllCaps="true"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="12dp"
+            app:strokeWidth="1dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:text="Документ 1"
+                    android:textSize="28sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="start|fill"
+                        android:text="Имею базовое образование:"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/spinner_based_education"
+                        android:layout_width="180dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="start|fill"
+                        android:text="Поступаю на ОП:"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/spinner_education_program"
+                        android:layout_width="180dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="start"
+                    android:text="Образование по данной ОП:"
+                    android:textSize="20sp"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginStart="8dp">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonDoc1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2Doc1"
+                        android:layout_width="100dp"
+                        android:checked="true"
+                        android:layout_height="wrap_content"
+                        android:text="Нет" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton3Doc1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Получаю" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="start"
+            android:text="Если Вы ходите добавить второй документ, нажмите на кнопку"
+            android:textSize="18sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_document"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:text="Добавить второй документ">
+        </com.google.android.material.button.MaterialButton>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/document2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="12dp"
+            app:strokeWidth="1dp"
+            android:visibility="gone"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:text="Документ 2"
+                    android:textSize="28sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="start|fill"
+                        android:text="Имею базовое образование:"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/spinner_based_education2"
+                        android:layout_width="180dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="start|fill"
+                        android:text="Поступаю на ОП:"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/spinner_education_program2"
+                        android:layout_width="180dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="start"
+                    android:text="Образование по данной ОП:"
+                    android:textSize="20sp"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginStart="8dp">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonDoc2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2Doc2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Нет" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton3Doc2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Получаю" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:text="Укажите, зачислялись ли раннее на указанную ОП"
+            android:textSize="18sp"/>
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:text="Бакалавр"/>
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="Специалист"/>
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="Магистр"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:layout_gravity="end"
+            android:text="@string/next">
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+
+</ScrollView>

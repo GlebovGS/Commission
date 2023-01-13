@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    app:cardCornerRadius="12dp"
+    android:elevation="24dp"
+    app:strokeWidth="2dp"
+    android:outlineAmbientShadowColor="@color/md_theme_dark_outline"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:padding="4dp"
+                android:text="Добавление документов"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:text="Перечень неоходимых документов:" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="16dp"
+                android:text="- ИНН\n- Паспорт/Свидетельство о рождении/Вид на жительство/Временное удостоверение гражданина/Адресная справка\n- Документ об образовании\n- Сертификаты\n- Льготы\n- Результаты олимпиад\n- Приписное свидетельство\n- Медицинская справка 086-у" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#5C5F61" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:text="Допустимый размер одного файла - до 35 мегабайт." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="16sp"
+                android:text="Общий размер всех файлов не должен превышать 100 мегабайт." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_ok"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="ОК" />
+
+        </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

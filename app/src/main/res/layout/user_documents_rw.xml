@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/documentId"
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center|fill"
+                android:gravity="center"
+                android:text="1" />
+
+            <ImageView
+                android:id="@+id/documentImage"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/iconpng" />
+
+            <TextView
+                android:id="@+id/documentTitle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:gravity="center|start"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Здесь будет название файла" />
+
+            <ImageView
+                android:id="@+id/documentDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/icondelete" />
+        </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
