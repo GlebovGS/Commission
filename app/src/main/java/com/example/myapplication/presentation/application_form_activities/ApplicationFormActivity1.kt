@@ -82,8 +82,6 @@ class ApplicationFormActivity1 : AppCompatActivity() {
                 binding.document2.isVisible = true
                 binding.btnAddDocument.text = "Не добавлять второй документ"
             }
-
-
         }
 
         binding.btnNext.setOnClickListener {

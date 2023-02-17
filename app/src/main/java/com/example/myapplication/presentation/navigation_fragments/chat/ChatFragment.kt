@@ -1,4 +1,4 @@
-package com.example.myapplication.presentation.ui.dashboard
+package com.example.myapplication.presentation.navigation_fragments.chat
 
 import android.os.Bundle
 import android.view.LayoutInflater

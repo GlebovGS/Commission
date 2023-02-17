@@ -13,9 +13,11 @@ import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityApplicationForm2Binding
+import com.example.myapplication.presentation.navigation_fragments.Navigation
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 
-class ApplicationFormActivity2 : AppCompatActivity() {
+class ApplicationFormActivity2 : AppCompatActivity(),IPriorityAdapter {
 
     var documentNumber = 0
     var educationForm = "?"
@@ -24,6 +26,7 @@ class ApplicationFormActivity2 : AppCompatActivity() {
     var cipher = "?"
     private var profile = "Не указан"
     var priority = 0
+    var count = 0 // Сколько всего создано приоритетов (максимум 6 на 2 документа)
 
     lateinit var binding: ActivityApplicationForm2Binding
     lateinit var speciality: Speciality
@@ -37,7 +40,7 @@ class ApplicationFormActivity2 : AppCompatActivity() {
         binding = ActivityApplicationForm2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.SpecialitiesRW.layoutManager = LinearLayoutManager(this)
-        binding.SpecialitiesRW.adapter = PriorityAdapter(specialitiesList)
+        binding.SpecialitiesRW.adapter = PriorityAdapter(specialitiesList,this)
 
         binding.spinnerSelectDocument.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
@@ -49,16 +52,19 @@ class ApplicationFormActivity2 : AppCompatActivity() {
         binding.spinnerSelectDocument.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, documentsList)
 
         binding.btnAddSpeciality.setOnClickListener{
-            dialogAddPriority()
+            if (count>=6){
+                showDialog("Нельзя добавить больше 6 приоритетов. Чтобы добавить новый, удалите какой-нибудь из существующих.")
+            }else{
+                dialogAddPriority()
+            }
         }
         binding.btnNext.setOnClickListener {
-            val intent = Intent(this, ApplicationFormActivity1::class.java)
+            val intent = Intent(this, Navigation::class.java)
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
         binding.btnBack.setOnClickListener {
             finish()
         }
-
     }
 
     @SuppressLint("InflateParams", "NotifyDataSetChanged")
@@ -106,6 +112,7 @@ class ApplicationFormActivity2 : AppCompatActivity() {
         btnOK.setOnClickListener{
             specialitiesList.add(UserPriority(documentNumber,educationForm,course,faculty,cipher,profile,priority))
             binding.SpecialitiesRW.adapter?.notifyDataSetChanged()
+            count++
             dialog.dismiss()
         }
     }
@@ -114,7 +121,6 @@ class ApplicationFormActivity2 : AppCompatActivity() {
         val dialogWindow = layoutInflater.inflate(R.layout.dialog_select_speciality,null)
         val dialog = Dialog(this)
         val btnOK = dialogWindow.findViewById<Button>(R.id.btn_OK)
-
 
         dialog.setContentView(dialogWindow)
         dialog.setCancelable(true)
@@ -141,9 +147,25 @@ class ApplicationFormActivity2 : AppCompatActivity() {
             profile = "${speciality.specialityTitle}($title)"
             faculty = speciality.facultyTitle
             cipher = speciality.specialityCipher
-
             dialog.dismiss()
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
+    override fun deletePriority(position: Int) {
+        specialitiesList.removeAt(position)
+        binding.SpecialitiesRW.adapter?.notifyDataSetChanged()
+    }
+
+    private fun showDialog(message: String){
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Ошибка")
+            .setMessage(message)
+            .setPositiveButton("ОК"){_,_-> }
+            .show()
+    }
+
+    //TODO Сделать разные проверки:
+    // Нельзя добавить два одинаковых приоритета или направления подготовки.
+    //
 }

@@ -74,7 +74,6 @@ class RegActivity4 : AppCompatActivity() {
         val number1 = Random.nextInt(-10,10)
         val number2 = Random.nextInt(-10,10)
         val number3 = Random.nextInt(-10,10)
-        val op = listOf<Char>('-','+')
         val result = number1+number2+number3
         with(dialog){
             setTitle("Решите простой пример")

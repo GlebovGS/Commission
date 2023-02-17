@@ -87,9 +87,59 @@
     <string name="enter_parents_data">Укажите данные Ваших родителей</string>
     <string name="father">Отец</string>
     <string name="mother">Мать</string>
+    //activity_addition_photo
     <string name="add_user_photo">Добавьте фото абитуриента</string>
     <string name="correct_photo">Уважаемые абитуриенты, пожалуйста, добавляйте корректное фото (jpg, png) подобного вида:</string>
-    //activity_confirm_personal_data
+    //activity_addition_documents
+    <string name="add_documents">Добавьте сканы документов</string>
+    <string name="download_files">Загруженные файлы:</string>
+    <string name="file_size">Допустимый размер файлов: 0 / 100 мегабайт</string>
+    <string name="download_png">Загрузить в формате jpg/png</string>
+    <string name="download_pdf">Загрузить в формате pdf</string>
+    //activity_application_form1
+    <string name="education_program_information">Информация об образовательной программе (ОП)</string>
+    <string name="document1">Документ 1</string>
+    <string name="based_education">Имею базовое образование:</string>
+    <string name="op">Поступаю на ОП:</string>
+    <string name="education_op">Образование по данной ОП:</string>
+    <string name="have">Есть</string>
+    <string name="not">Нет</string>
+    <string name="during">Получаю</string>
+    <string name="add_second_document">Если Вы хотите добавить второй документ, нажмите на кнопку</string>
+    <string name="add_second_document_button">Добавить второй документ</string>
+    <string name="document2">Документ 2</string>
+    //activity_application_form2
+    <string name="choice_speciality">Выбор направления подготовки (специальности)</string>
+    <string name="pick_based_op_document">Укажите документ, относительно которого собираетесь формировать список направлений, затем для добавления направления нажмите на кнопку</string>
+    <string name="based_op_document">Документ базового ОП</string>
+    //dialog_add_speciality
+    <string name="add_priority">Добавление приоритета</string>
+    <string name="education_form">Форма обучения:</string>
+    <string name="profile">Название направления (профиль)</string>
+    <string name="pick">Выбрать</string>
+    <string name="priority">Приоритет:</string>
+    <string name="made">Готово</string>
+    //documents_info_window
+    <string name="addition_documents">Добавление документов</string>
+    <string name="documents_list">Перечень неоходимых документов:</string>
+    <string name="many_documents">- ИНН\n- Паспорт/Свидетельство о рождении/Вид на жительство/Временное удостоверение гражданина/Адресная справка\n- Документ об образовании\n- Сертификаты\n- Льготы\n- Результаты олимпиад\n- Приписное свидетельство\n- Медицинская справка 086-у</string>
+    <string name="size_one_file">Допустимый размер одного файла - до 35 мегабайт.</string>
+    <string name="size_all_files">Общий размер всех файлов не должен превышать 100 мегабайт.</string>
+    <string name="ok">ОК</string>
+    //fragment_profile
+    <string name="place_for_name">Место для имени абитуриента</string>
+    <string name="register_number">Ваш регистрационный номер:</string>
+    <string name="id_photo">Ваше ID фото</string>
+    <string name="documents_status">Статус Ваших документов:</string>
+    <string name="in_processing">В ОБРАБОТКЕ</string>
+    <string name="rating_id_button">Ваш рейтинг по ID фото</string>
+    <string name="download_form_button">Ваша анкета (pdf)</string>
+    <string name="download_documents">Загруженные документы (zip)</string>
+
+    <string name="btn_faculty_email"><u>Почта факультета</u></string>
+    <string name="btn_faculty_pk_email"><u>Почта приемной коммиссии</u></string>
+    <string name="btn_faculty_site"><u>Сайт факультета</u></string>
+    <string name="btn_faculty_phone_pk"><u>Телефон приемной коммиссии факультета</u></string>
 
 
 </resources>

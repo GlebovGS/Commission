@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/navigation_chat_with_operator"
-        android:icon="@drawable/chat"
+        android:icon="@drawable/ic_baseline_chat_24"
         android:title="@string/title_chat" />
 
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/document"
+        android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/title_profile" />
 
     <item
         android:id="@+id/navigation_info"
-        android:icon="@drawable/info"
+        android:icon="@drawable/ic_baseline_error_outline_24"
         android:title="@string/title_info" />
 
 </menu>

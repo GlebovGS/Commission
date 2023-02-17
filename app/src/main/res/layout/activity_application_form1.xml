@@ -23,8 +23,8 @@
             android:layout_marginEnd="16dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Информация об образовательной программе"
-            android:textSize="30sp"
+            android:text="@string/education_program_information"
+            android:textSize="28sp"
             android:textAllCaps="true"/>
 
         <com.google.android.material.card.MaterialCardView
@@ -46,11 +46,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginEnd="8dp"
                     android:layout_gravity="center"
                     android:gravity="start"
-                    android:text="Документ 1"
+                    android:text="@string/document1"
                     android:textSize="28sp"/>
 
                 <LinearLayout
@@ -58,20 +58,19 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_width="160dp"
+                        android:layout_height="75dp"
+                        android:layout_marginStart="12dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="start|fill"
-                        android:text="Имею базовое образование:"
-                        android:textSize="20sp"/>
+                        android:gravity="start"
+                        android:text="@string/based_education"
+                        android:textSize="18sp"/>
                     <Spinner
                         android:id="@+id/spinner_based_education"
-                        android:layout_width="180dp"
-                        android:layout_height="65dp"
+                        android:layout_width="200dp"
+                        android:layout_height="75dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="8dp"/>
+                        android:layout_marginEnd="4dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -79,18 +78,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_width="160dp"
+                        android:layout_height="75dp"
+                        android:layout_marginStart="12dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="start|fill"
-                        android:text="Поступаю на ОП:"
-                        android:textSize="20sp"/>
+                        android:gravity="start"
+                        android:text="@string/op"
+                        android:textSize="18sp"/>
                     <Spinner
                         android:id="@+id/spinner_education_program"
-                        android:layout_width="180dp"
-                        android:layout_height="65dp"
+                        android:layout_width="200dp"
+                        android:layout_height="75dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="8dp"/>
                 </LinearLayout>
@@ -102,10 +100,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginEnd="8dp"
                     android:gravity="start"
-                    android:text="Образование по данной ОП:"
+                    android:text="@string/education_op"
                     android:textSize="20sp"/>
 
                 <RadioGroup
@@ -118,22 +116,22 @@
 
                     <RadioButton
                         android:id="@+id/radioButtonDoc1"
-                        android:layout_width="100dp"
+                        android:layout_width="110dp"
                         android:layout_height="wrap_content"
-                        android:text="Есть" />
+                        android:text="@string/have" />
 
                     <RadioButton
                         android:id="@+id/radioButton2Doc1"
-                        android:layout_width="100dp"
+                        android:layout_width="110dp"
                         android:checked="true"
                         android:layout_height="wrap_content"
-                        android:text="Нет" />
+                        android:text="@string/not" />
 
                     <RadioButton
                         android:id="@+id/radioButton3Doc1"
-                        android:layout_width="100dp"
+                        android:layout_width="110dp"
                         android:layout_height="wrap_content"
-                        android:text="Получаю" />
+                        android:text="@string/during" />
 
                 </RadioGroup>
 
@@ -148,7 +146,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:gravity="start"
-            android:text="Если Вы ходите добавить второй документ, нажмите на кнопку"
+            android:text="@string/add_second_document"
             android:textSize="18sp"/>
 
         <com.google.android.material.button.MaterialButton
@@ -158,7 +156,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_gravity="center"
-            android:text="Добавить второй документ">
+            android:text="@string/add_second_document_button">
         </com.google.android.material.button.MaterialButton>
 
 
@@ -184,11 +182,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginEnd="8dp"
                     android:layout_gravity="center"
                     android:gravity="start"
-                    android:text="Документ 2"
+                    android:text="@string/document2"
                     android:textSize="28sp"/>
 
                 <LinearLayout
@@ -196,20 +194,19 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_width="160dp"
+                        android:layout_height="75dp"
+                        android:layout_marginStart="12dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="start|fill"
-                        android:text="Имею базовое образование:"
-                        android:textSize="20sp"/>
+                        android:gravity="start"
+                        android:text="@string/based_education"
+                        android:textSize="18sp"/>
                     <Spinner
                         android:id="@+id/spinner_based_education2"
-                        android:layout_width="180dp"
-                        android:layout_height="65dp"
+                        android:layout_width="200dp"
+                        android:layout_height="75dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="8dp"/>
+                        android:layout_marginEnd="4dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -217,20 +214,19 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_width="160dp"
+                        android:layout_height="75dp"
+                        android:layout_marginStart="12dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="start|fill"
-                        android:text="Поступаю на ОП:"
-                        android:textSize="20sp"/>
+                        android:gravity="start"
+                        android:text="@string/op"
+                        android:textSize="18sp"/>
                     <Spinner
                         android:id="@+id/spinner_education_program2"
-                        android:layout_width="180dp"
-                        android:layout_height="65dp"
+                        android:layout_width="200dp"
+                        android:layout_height="75dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="8dp"/>
+                        android:layout_marginEnd="4dp" />
                 </LinearLayout>
 
 
@@ -239,10 +235,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginEnd="8dp"
                     android:gravity="start"
-                    android:text="Образование по данной ОП:"
+                    android:text="@string/education_op"
                     android:textSize="20sp"/>
 
                 <RadioGroup
@@ -255,22 +251,22 @@
 
                     <RadioButton
                         android:id="@+id/radioButtonDoc2"
-                        android:layout_width="100dp"
+                        android:layout_width="110dp"
                         android:layout_height="wrap_content"
-                        android:text="Есть" />
+                        android:text="@string/have" />
 
                     <RadioButton
                         android:id="@+id/radioButton2Doc2"
-                        android:layout_width="100dp"
+                        android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:checked="true"
-                        android:text="Нет" />
+                        android:text="@string/not" />
 
                     <RadioButton
                         android:id="@+id/radioButton3Doc2"
-                        android:layout_width="100dp"
+                        android:layout_width="110dp"
                         android:layout_height="wrap_content"
-                        android:text="Получаю" />
+                        android:text="@string/during" />
 
                 </RadioGroup>
 

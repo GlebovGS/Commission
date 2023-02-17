@@ -7,6 +7,8 @@ class ValidateLoginUseCase {
             return ValidationResult(successful = false,errorMassage = "Поле не может быть пустым!")
         }
 
+
+
         return ValidationResult(successful = true)
     }
 }

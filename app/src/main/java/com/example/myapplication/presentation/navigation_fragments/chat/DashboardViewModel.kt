@@ -1,4 +1,4 @@
-package com.example.myapplication.presentation.ui.dashboard
+package com.example.myapplication.presentation.navigation_fragments.chat
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

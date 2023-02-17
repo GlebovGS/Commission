@@ -1,58 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_bg"
-    tools:context=".presentation.ui.information.NotificationsFragment"
-    android:paddingBottom="?attr/actionBarSize">
+    android:orientation="vertical"
+    tools:context=".presentation.navigation_fragments.information.NotificationsFragment">
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bg3"
-        android:enabled="true"
-        android:gravity="center_horizontal"
-        android:padding="10dp"
-        android:text="Электронные адреса отборочных комисcий:"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/faculty_refs_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/bg2"
-        android:enabled="true"
-        android:gravity="center_horizontal"
-        android:linksClickable="true"
-        android:padding="10dp"
-        android:text="@string/text_with_link"
-        android:textColorLink="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Наши факультеты"
+        android:textSize="20sp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/faculty_refs_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/main_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

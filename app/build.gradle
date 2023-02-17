@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -33,32 +34,42 @@ android {
     buildFeatures {
         viewBinding true
     }
-
 }
 
 
 dependencies {
 
     def koin_android_version= "3.3.1"
-
     implementation "io.insert-koin:koin-android:$koin_android_version"
     implementation "io.insert-koin:koin-android-compat:$koin_android_version"
     implementation "io.insert-koin:koin-androidx-workmanager:$koin_android_version"
     implementation "io.insert-koin:koin-androidx-navigation:$koin_android_version"
 
+//    def room_version = "2.5.0"
+//    implementation("androidx.room:room-runtime:$room_version")
+//    annotationProcessor("androidx.room:room-compiler:$room_version")
+//    kapt("androidx.room:room-compiler:$room_version")
+//    implementation("androidx.room:room-ktx:$room_version")
+//
+//    def retrofit_version = "2.9.0"
+//    implementation ("com.squareup.retrofit2:retrofit:$retrofit_version")
+//    implementation ("com.squareup.retrofit2:converter-gson:$retrofit_version")
+//
+//    def coroutines_version = "1.6.4"
+//    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version")
+//    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
+
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-livedata:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.5.1'
-
-    implementation 'com.google.code.gson:gson:2.10'
-
     implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0-alpha04'
     implementation 'androidx.navigation:navigation-ui-ktx:2.6.0-alpha04'
-
+    implementation 'com.google.code.gson:gson:2.10'
     implementation 'com.google.android.material:material:1.7.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
+    //implementation "com.anggrayudi:storage:1.5.4" //Библиотека для получения пути к файлу из Uri
 }

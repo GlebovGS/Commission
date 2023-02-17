@@ -10,7 +10,7 @@
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Добавление приоритета"
+        android:text="@string/add_priority"
         android:textSize="30sp"
         android:layout_gravity="center"
         android:gravity="center"/>
@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="Форма обучения:" />
+                android:text="@string/education_form" />
             <Spinner
                 android:id="@+id/spinner1"
                 android:layout_width="match_parent"
@@ -48,7 +48,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="Название направления (профиль)" />
+                android:text="@string/profile" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_select_speciality"
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="Выбрать"/>
+                android:text="@string/pick"/>
 
         </TableRow>
 
@@ -70,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="Приоритет:" />
+                android:text="@string/priority" />
 
             <Spinner
                 android:id="@+id/spinner2"
@@ -87,7 +87,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
         android:layout_gravity="center"
-        android:text="Готово">
+        android:text="@string/made">
 
     </com.google.android.material.button.MaterialButton>
 </LinearLayout>

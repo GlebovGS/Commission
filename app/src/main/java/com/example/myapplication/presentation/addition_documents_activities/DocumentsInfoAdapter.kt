@@ -38,9 +38,7 @@ class DocumentsInfoAdapter(private val documentsList: List<DocumentsInfo>,
     override fun getItemCount(): Int {
         return documentsList.size
     }
-
 }
-
 
 interface IDocumentsInfoAdapter{
     fun deleteDocument(position:Int)

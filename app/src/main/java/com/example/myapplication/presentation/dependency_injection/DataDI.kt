@@ -3,10 +3,12 @@ package com.example.myapplication.presentation.dependency_injection
 import com.example.myapplication.data.personal_data_repositories.UserParentsDataRepositoryImpl
 import com.example.myapplication.data.personal_data_repositories.UserPersonalData1RepositoryImpl
 import com.example.myapplication.data.personal_data_repositories.UserPersonalData2RepositoryImpl
+import com.example.myapplication.data.photo_and_documents_repositores.UserPhotoRepositoryImpl
 import com.example.myapplication.data.registration_repositories.UserContactsRepositoryImpl
 import com.example.myapplication.data.registration_repositories.UserDateRepositoryImpl
 import com.example.myapplication.data.registration_repositories.UserLoginPasswordRepositoryImpl
 import com.example.myapplication.data.registration_repositories.UserNameRepositoryImpl
+import com.example.myapplication.domain.addition_documents_usecases.IUserPhotoRepository
 import com.example.myapplication.domain.personal_data_usecases.IUserParentsDataRepository
 import com.example.myapplication.domain.personal_data_usecases.IUserPersonalData1Repository
 import com.example.myapplication.domain.personal_data_usecases.IUserPersonalData2Repository
@@ -42,6 +44,10 @@ val dataModule = module{
     }
     single <IUserParentsDataRepository>{
         UserParentsDataRepositoryImpl(context = get())
+    }
+
+    single <IUserPhotoRepository>{
+        UserPhotoRepositoryImpl(context = get())
     }
 
 }

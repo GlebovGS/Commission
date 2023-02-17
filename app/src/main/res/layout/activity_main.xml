@@ -18,19 +18,21 @@ style="@style/AppTheme">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_gravity="center"
         android:layout_marginTop="64dp"
         android:text="@string/commission"
-        android:textSize="34sp"/>
+        android:textSize="30sp"/>
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="18dp"
         android:text="@string/_2023"
         android:textSize="24sp"/>
 
@@ -38,10 +40,11 @@ style="@style/AppTheme">
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="18dp"
         android:text="@string/donntu"
-        android:textSize="34sp"/>
+        android:textSize="28sp"/>
 
 
         <com.google.android.material.button.MaterialButton

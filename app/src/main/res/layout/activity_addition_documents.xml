@@ -31,34 +31,41 @@
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:gravity="center"
-            android:text="Добавьте сканы документов"
+            android:text="@string/add_documents"
             android:textAllCaps="true"
             android:textSize="34sp" />
 
-        <TextView
-            android:id="@+id/textViewDoc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_gravity="start"
-            android:text="Загруженные файлы:"
-            android:textSize="20sp" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/AddDocumentsRW"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="#E8EAF6"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
+            android:layout_height="260dp"
+            android:layout_marginTop="40dp"
+            android:visibility="gone"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:paddingBottom="8dp"
             android:scrollbarStyle="outsideInset"
             android:scrollbars="vertical">
         </androidx.recyclerview.widget.RecyclerView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageEmptyRW"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:padding="24dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/ic_baseline_upload_file_24"
+            android:tint="@color/md_theme_dark_onPrimaryContainer"/>
+        <TextView
+            android:id="@+id/textEmptyRW"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="Здесь будут отображаться Ваши документы"/>
 
 
         <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -82,7 +89,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginStart="16dp"
             android:gravity="center"
-            android:text="Допустимый размер файлов: 0 / 100 мегабайт"
+            android:text="@string/file_size"
             android:textSize="12sp" />
 
         <com.google.android.material.button.MaterialButton
@@ -93,7 +100,7 @@
             android:layout_marginTop="24dp"
             android:backgroundTint="#3F51B5"
             android:textColor="#fff"
-            android:text="Загрузить в формате jpg/png">
+            android:text="@string/download_png">
         </com.google.android.material.button.MaterialButton>
 
 
@@ -104,7 +111,7 @@
             android:layout_gravity="center"
             android:backgroundTint="#FF5722"
             android:textColor="#fff"
-            android:text="Загрузить в формате pdf">
+            android:text="@string/download_pdf">
         </com.google.android.material.button.MaterialButton>
 
         <androidx.constraintlayout.widget.ConstraintLayout

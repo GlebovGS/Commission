@@ -20,7 +20,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:padding="4dp"
-                android:text="Добавление документов"
+                android:text="@string/addition_documents"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -30,14 +30,14 @@
                 android:gravity="start"
                 android:padding="16dp"
                 android:textSize="16sp"
-                android:text="Перечень неоходимых документов:" />
+                android:text="@string/documents_list" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
                 android:padding="16dp"
-                android:text="- ИНН\n- Паспорт/Свидетельство о рождении/Вид на жительство/Временное удостоверение гражданина/Адресная справка\n- Документ об образовании\n- Сертификаты\n- Льготы\n- Результаты олимпиад\n- Приписное свидетельство\n- Медицинская справка 086-у" />
+                android:text="@string/many_documents" />
 
             <View
                 android:layout_width="match_parent"
@@ -52,7 +52,7 @@
                 android:gravity="start"
                 android:padding="16dp"
                 android:textSize="16sp"
-                android:text="Допустимый размер одного файла - до 35 мегабайт." />
+                android:text="@string/size_one_file" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:textSize="16sp"
-                android:text="Общий размер всех файлов не должен превышать 100 мегабайт." />
+                android:text="@string/size_all_files" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_ok"
@@ -71,7 +71,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center"
-                android:text="ОК" />
+                android:text="@string/ok" />
 
         </LinearLayout>
 

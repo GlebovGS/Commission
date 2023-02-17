@@ -10,8 +10,8 @@ class ValidateNameUseCase {
         {
             return ValidationResult(successful = false,errorMassage = "В поле не должно быть цифр")
         }
-        if(!Regex("[А-ЯЁа-яё\\s]{1,40}").matches(p0)){
-            return ValidationResult(successful = false,errorMassage = "ФИО должно быть на русском языке")
+        if(!Regex("[А-ЯЁа-яё\\s -]{1,40}").matches(p0)){
+            return ValidationResult(successful = false,errorMassage = "Можно использовать только русские буквы, \"-\" и пробелы")
         }
         return ValidationResult(successful = true)
     }

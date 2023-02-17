@@ -17,17 +17,18 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_gravity="center"
+            android:gravity="center"
             android:text="@string/profile_data"
             android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="360dp"
-            android:layout_height="78dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_gravity="center"
             android:gravity="center"
@@ -38,8 +39,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="32dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
     app:cardCornerRadius="12dp"
     app:strokeWidth="2dp">
 
@@ -60,18 +61,20 @@
                     android:id="@+id/textView13"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:padding="8dp"
                     android:text="@string/registration_id" />
 
                 <TextView
                     android:id="@+id/textViewID"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="fill"
-                    android:padding="10dp"
+                    android:padding="8dp"
                     android:text="@string/textview"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
             </TableRow>
 
             <TableRow
@@ -84,17 +87,19 @@
                     android:id="@+id/textView15"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:padding="8dp"
                     android:text="@string/photo_id" />
 
                 <TextView
                     android:id="@+id/textViewIDphoto"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
                     android:text="@string/textview"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
             </TableRow>
 
             <TableRow
@@ -107,17 +112,19 @@
                     android:id="@+id/textView17"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:padding="8dp"
                     android:text="@string/confirm_login" />
 
                 <TextView
                     android:id="@+id/textViewLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:padding="8dp"
                     android:text="@string/textview"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
             </TableRow>
 
             <TableRow
@@ -130,17 +137,19 @@
                     android:id="@+id/textView19"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:padding="8dp"
                     android:text="@string/confirm_fio" />
 
                 <TextView
                     android:id="@+id/textViewFIO"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:padding="8dp"
                     android:text="@string/textview"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
             </TableRow>
 
             <TableRow
@@ -153,17 +162,19 @@
                     android:id="@+id/textView11"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:padding="8dp"
                     android:text="@string/confirm_date" />
 
                 <TextView
                     android:id="@+id/textViewDate"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="10dp"
+                    android:padding="8dp"
                     android:text="@string/textview"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
             </TableRow>
 
             <TableRow
@@ -176,17 +187,19 @@
                     android:id="@+id/textView22"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:padding="8dp"
                     android:text="@string/confirm_email" />
 
                 <TextView
                     android:id="@+id/textViewEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:padding="8dp"
                     android:text="@string/textview"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
             </TableRow>
 
             <TableRow
@@ -199,17 +212,19 @@
                     android:id="@+id/textView23"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:padding="8dp"
                     android:text="@string/confirm_number_phone" />
 
                 <TextView
                     android:id="@+id/textViewNumberPhone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="10dp"
+                    android:padding="8dp"
                     android:text="@string/textview"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
             </TableRow>
 
             <TableRow
@@ -222,17 +237,19 @@
                     android:id="@+id/textView25"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:padding="8dp"
                     android:text="@string/contacts" />
 
                 <TextView
                     android:id="@+id/textViewContacts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:padding="8dp"
                     android:text="@string/textview"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
             </TableRow>
         </TableLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -25,10 +25,10 @@ class PersonalData3ViewModel(private val save_parents_data:SaveParentsDataUseCas
     val validationResult2: LiveData<ValidationResult> = validationResult2Mut
     val validationResult3: LiveData<ValidationResult> = validationResult3Mut
     val validationResult4: LiveData<ValidationResult> = validationResult4Mut
-    val validationResult5: LiveData<ValidationResult> = validationResult1Mut
-    val validationResult6: LiveData<ValidationResult> = validationResult2Mut
-    val validationResult7: LiveData<ValidationResult> = validationResult3Mut
-    val validationResult8: LiveData<ValidationResult> = validationResult4Mut
+    val validationResult5: LiveData<ValidationResult> = validationResult5Mut
+    val validationResult6: LiveData<ValidationResult> = validationResult6Mut
+    val validationResult7: LiveData<ValidationResult> = validationResult7Mut
+    val validationResult8: LiveData<ValidationResult> = validationResult8Mut
 
     fun save(p0:String,p1:String,p2:String,p3:String,p4:String,
              p5:String,p6:String,p7:String,p8:String,p9:String)

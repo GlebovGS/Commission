@@ -1,6 +1,8 @@
 package com.example.myapplication.presentation.dependency_injection
 
 
+import com.example.myapplication.domain.addition_documents_usecases.GetPhotoUseCase
+import com.example.myapplication.domain.addition_documents_usecases.SavePhotoUseCase
 import com.example.myapplication.domain.personal_data_usecases.*
 import com.example.myapplication.domain.registration_usecases.*
 import org.koin.dsl.module
@@ -46,8 +48,8 @@ val domainModule = module {
     factory<GetDateUseCase>{
         GetDateUseCase(user_date_repository = get())
     }
-    factory<GetLoginPaswordUseCase>{
-        GetLoginPaswordUseCase(user_login_password_respository = get())
+    factory<GetLoginUseCase>{
+        GetLoginUseCase(user_login_password_respository = get())
     }
     factory<GetContactsUseCase>{
         GetContactsUseCase(user_contacts_respository = get())
@@ -88,4 +90,11 @@ val domainModule = module {
         GetParentsDataUseCase(user_parents_data_repository = get())
     }
 
+
+    factory<SavePhotoUseCase> {
+        SavePhotoUseCase(user_photo_repository = get())
+    }
+    factory<GetPhotoUseCase> {
+        GetPhotoUseCase(user_photo_repository = get())
+    }
 }

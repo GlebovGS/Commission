@@ -7,9 +7,9 @@ class ValidateCitizenshipUseCase {
         if(p0.isBlank()){
             return ValidationResult(successful = false,errorMassage = "Поле не может быть пустым!")
         }
-        if(!Regex("[А-Яа-яё\\s]+").matches(p0)){
+        if(!Regex("[А-ЯЁа-яё\\s -]+").matches(p0)){
 
-            return ValidationResult(successful = false,errorMassage = "Поле должно содержать только русские буквы")
+            return ValidationResult(successful = false,errorMassage = "Можно использовать только русские буквы, \"-\" и пробелы")
         }
         return ValidationResult(successful = true)
     }

@@ -1,15 +1,13 @@
 package com.example.myapplication.presentation.dependency_injection
 
-import com.example.myapplication.presentation.addition_documents_activities.AdditionDocumentsActivity
 import com.example.myapplication.presentation.addition_documents_activities.AdditionDocumentsViewModel
+import com.example.myapplication.presentation.addition_documents_activities.AdditionPhotoViewModel
 import com.example.myapplication.presentation.personal_data_activities.ConfirmPersonalDataViewModel
 import com.example.myapplication.presentation.personal_data_activities.PersonalData1ViewModel
 import com.example.myapplication.presentation.personal_data_activities.PersonalData2ViewModel
 import com.example.myapplication.presentation.personal_data_activities.PersonalData3ViewModel
-import com.example.myapplication.presentation.registration_activities.Reg1ViewModel
-import com.example.myapplication.presentation.registration_activities.Reg2ViewModel
-import com.example.myapplication.presentation.registration_activities.Reg3ViewModel
-import com.example.myapplication.presentation.registration_activities.Reg4ViewModel
+import com.example.myapplication.presentation.registration_activities.*
+import com.example.myapplication.presentation.navigation_fragments.profile.ProfileViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -30,6 +28,10 @@ val presentationModule = module {
         Reg4ViewModel(validate_email = get(), validate_phone = get(), save_contacts = get())
     }
 
+    viewModel<ConfirmRegViewModel> {
+        ConfirmRegViewModel(getNameUseCase = get(), getDateUseCase = get(), getLoginUseCase = get(), getContactsUseCase = get())
+    }
+
     viewModel<PersonalData1ViewModel> {
         PersonalData1ViewModel(save_personal_data1 = get(), validateINN = get(), validate_citizenship = get())
     }
@@ -48,5 +50,12 @@ val presentationModule = module {
         AdditionDocumentsViewModel(context = get())
     }
 
+    viewModel<AdditionPhotoViewModel> {
+        AdditionPhotoViewModel(context = get(), save_photo = get())
+    }
+
+    viewModel<ProfileViewModel> {
+        ProfileViewModel(getNameUseCase = get(), getPhotoUseCase = get())
+    }
 
 }

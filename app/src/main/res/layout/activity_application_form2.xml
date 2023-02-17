@@ -22,7 +22,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Выбор направления подготовки (специальности)"
+        android:text="@string/choice_speciality"
         android:textSize="24sp"
         android:textAllCaps="true"/>
 
@@ -34,7 +34,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Укажите документ, относительно которого собираетесь формировать список направлений, затем для добавления направления нажмите на кнопку"
+        android:text="@string/pick_based_op_document"
         android:textSize="16sp"/>
 
     <LinearLayout
@@ -48,14 +48,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Документ базового ОП"
+            android:text="@string/based_op_document"
             android:textSize="16sp"/>
         <Spinner
             android:id="@+id/spinnerSelectDocument"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="50dp">
         </Spinner>
     </LinearLayout>
 

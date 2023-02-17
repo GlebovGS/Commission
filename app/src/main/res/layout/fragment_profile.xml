@@ -1,24 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DCEDC8"
-    tools:context=".presentation.ui.dashboard.ChatFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="48dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="100dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/md_theme_dark_secondary">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ImageViewProfilePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/user_photo"
+            android:scaleType="centerCrop">
+        </com.google.android.material.imageview.ShapeableImageView>
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
-        android:id="@+id/text_profile"
+        android:id="@+id/textViewProfileName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Здесь будут данные профиля"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/place_for_name"
+        android:gravity="center"
+        android:textSize="28sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/register_number"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/textViewProfileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="6789"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/id_photo"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/textViewProfileIdPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="1234"
+                android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/documents_status"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textViewProfileStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="fill_vertical"
+            android:textColor="#e4cf49"
+            android:text="@string/in_processing"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_gravity="center"
+        android:text="@string/rating_id_button">
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_download_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_gravity="center"
+        android:text="@string/download_form_button"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_download_documents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_gravity="center"
+        android:text="@string/download_documents"/>
+
+</LinearLayout>
+
+</ScrollView>
