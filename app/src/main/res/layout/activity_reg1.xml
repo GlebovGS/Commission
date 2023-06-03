@@ -70,7 +70,6 @@ style="@style/AppTheme">
             android:padding="8dp"
             android:ems="10"
             android:hint="@string/lastname"
-            android:autofillHints="name"
             android:inputType="textPersonName"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -88,7 +87,6 @@ style="@style/AppTheme">
             android:padding="8dp"
             android:ems="10"
             android:hint="@string/name"
-            android:autofillHints="name"
             android:inputType="textPersonName"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -107,7 +105,6 @@ style="@style/AppTheme">
             android:padding="8dp"
             android:ems="10"
             android:hint="@string/patronymic"
-            android:autofillHints="name"
             android:inputType="textPersonName"/>
     </com.google.android.material.textfield.TextInputLayout>
 

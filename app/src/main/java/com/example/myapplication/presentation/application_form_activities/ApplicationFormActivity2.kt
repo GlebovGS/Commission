@@ -16,7 +16,6 @@ import com.example.myapplication.databinding.ActivityApplicationForm2Binding
 import com.example.myapplication.presentation.navigation_fragments.Navigation
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-
 class ApplicationFormActivity2 : AppCompatActivity(),IPriorityAdapter {
 
     var documentNumber = 0
@@ -24,6 +23,7 @@ class ApplicationFormActivity2 : AppCompatActivity(),IPriorityAdapter {
     var course = 1  //TODO Как определяется курс?
     var faculty = "?"
     var cipher = "?"
+    var specialityTitle = "?"
     private var profile = "Не указан"
     var priority = 0
     var count = 0 // Сколько всего создано приоритетов (максимум 6 на 2 документа)
@@ -34,13 +34,12 @@ class ApplicationFormActivity2 : AppCompatActivity(),IPriorityAdapter {
     val specialitiesList = mutableListOf<UserPriority>()
     val documentsList = listOf("Документ №1", "Документ №2")
 
-    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityApplicationForm2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.SpecialitiesRW.layoutManager = LinearLayoutManager(this)
-        binding.SpecialitiesRW.adapter = PriorityAdapter(specialitiesList,this)
+        binding.SpecialitiesRW.adapter = PriorityAdapter(this, specialitiesList,this)
 
         binding.spinnerSelectDocument.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
@@ -59,8 +58,31 @@ class ApplicationFormActivity2 : AppCompatActivity(),IPriorityAdapter {
             }
         }
         binding.btnNext.setOnClickListener {
-            val intent = Intent(this, Navigation::class.java)
-            startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+            val priorities = mutableListOf<Int>()
+            val profiles = mutableListOf<String>()
+            for(speciality in specialitiesList){
+                priorities.add(speciality.priority)
+            }
+            for(speciality in specialitiesList){
+                profiles.add(speciality.profile)
+            }
+            val duplicatePrioritiesList = priorities.groupingBy { it }.eachCount().filter { it.value > 1 }
+            val duplicateProfilesList = profiles.groupingBy { it }.eachCount().filter { it.value > 1 }
+            if(count==0)
+            {
+                showDialog("Ни одно из направлений подготовки не выбрано!")
+            }else{
+                if(duplicatePrioritiesList.isEmpty()){
+                    if(duplicateProfilesList.isEmpty()){
+                        val intent = Intent(this, Navigation::class.java)
+                        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+                    }else{
+                        showDialog("Направления подготовки не могут повторяться!")
+                    }
+                }else{
+                    showDialog("Обнаружены одинаковые приоритеты! Распределите приоритеты так, чтобы они не повторялись.")
+                }
+            }
         }
         binding.btnBack.setOnClickListener {
             finish()
@@ -76,7 +98,7 @@ class ApplicationFormActivity2 : AppCompatActivity(),IPriorityAdapter {
         val btnOK = dialogWindow.findViewById<Button>(R.id.btn_dialog_ok)
 
         val educationForms = arrayListOf("Очная","Заочная","Очно-заочная")
-        val priorities = arrayListOf(1,2,3)
+        val priorities = arrayListOf(1,2,3,4,5,6)
 
         val selectEducationForm = dialogWindow.findViewById<Spinner>(R.id.spinner1)
         val selectPriority = dialogWindow.findViewById<Spinner>(R.id.spinner2)
@@ -110,8 +132,8 @@ class ApplicationFormActivity2 : AppCompatActivity(),IPriorityAdapter {
         }
 
         btnOK.setOnClickListener{
-            specialitiesList.add(UserPriority(documentNumber,educationForm,course,faculty,cipher,profile,priority))
-            binding.SpecialitiesRW.adapter?.notifyDataSetChanged()
+            specialitiesList.add(UserPriority(documentNumber,educationForm,course,faculty,cipher,profile,specialityTitle,priority))
+            binding.SpecialitiesRW.adapter?.notifyItemChanged(specialitiesList.size-1)
             count++
             dialog.dismiss()
         }
@@ -143,7 +165,7 @@ class ApplicationFormActivity2 : AppCompatActivity(),IPriorityAdapter {
                 speciality = specialityList1.first { it.specialityTitle == title }
                 title = "профиль не указан"
             }
-
+            specialityTitle = speciality.specialityTitle
             profile = "${speciality.specialityTitle}($title)"
             faculty = speciality.facultyTitle
             cipher = speciality.specialityCipher
@@ -153,8 +175,13 @@ class ApplicationFormActivity2 : AppCompatActivity(),IPriorityAdapter {
 
     @SuppressLint("NotifyDataSetChanged")
     override fun deletePriority(position: Int) {
+        count--
         specialitiesList.removeAt(position)
-        binding.SpecialitiesRW.adapter?.notifyDataSetChanged()
+        binding.SpecialitiesRW.adapter?.notifyItemRemoved(position)
+    }
+
+    override fun updatePriority(position: Int, newPriority: Int) {
+        specialitiesList[position].priority = newPriority
     }
 
     private fun showDialog(message: String){
@@ -164,8 +191,4 @@ class ApplicationFormActivity2 : AppCompatActivity(),IPriorityAdapter {
             .setPositiveButton("ОК"){_,_-> }
             .show()
     }
-
-    //TODO Сделать разные проверки:
-    // Нельзя добавить два одинаковых приоритета или направления подготовки.
-    //
 }
