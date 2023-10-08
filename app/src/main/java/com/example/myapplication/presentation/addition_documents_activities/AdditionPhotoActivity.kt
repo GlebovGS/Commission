@@ -19,7 +19,7 @@ class AdditionPhotoActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAdditionPhotoBinding
 
-    var flag = 0
+    private var photoExists = false
 
     @RequiresApi(Build.VERSION_CODES.P)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,18 +29,17 @@ class AdditionPhotoActivity : AppCompatActivity() {
 
         addPhotoVM.user_photo.observe(this) {
             binding.imageUserPhoto.setImageBitmap(it)
-            flag = 1
+            photoExists = true
         }
 
         binding.btnNext.setOnClickListener{
 
-            if(flag==1){
+            if(photoExists){
                 val intent = Intent(this, AdditionDocumentsActivity::class.java)
                 startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
             }else{
                 showDialog()
             }
-
         }
 
         binding.imageUserPhoto.setOnClickListener{

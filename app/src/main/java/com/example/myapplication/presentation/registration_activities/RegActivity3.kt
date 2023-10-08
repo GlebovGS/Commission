@@ -19,27 +19,26 @@ class RegActivity3 : AppCompatActivity() {
         binding = ActivityReg3Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        reg3VM.validationResult1.observe(this, Observer{
+        reg3VM.validationResult1.observe(this) {
             if (it.errorMassage != null) {
                 binding.editTextUserLogin.error = it.errorMassage
             }
-        })
-        reg3VM.validationResult2.observe(this, Observer{
+        }
+        reg3VM.validationResult2.observe(this) {
             if (it.errorMassage != null) {
                 binding.editTextUserPassword.error = it.errorMassage
             }
-        })
-        reg3VM.validationResult3.observe(this, Observer{
+        }
+        reg3VM.validationResult3.observe(this){
             if (it.errorMassage != null) {
                 binding.editTextUserConfirmPassword.error = it.errorMassage
             }
-        })
+        }
 
         binding.btnNext.setOnClickListener{
             val userLogin = binding.editTextUserLogin.text.toString().trim()
             val userPassword = binding.editTextUserPassword.text.toString().trim()
             val userRepeatedPassword = binding.editTextUserConfirmPassword.text.toString().trim()
-
             reg3VM.save(userLogin, userPassword ,userRepeatedPassword)
 
             if(binding.editTextUserLogin.error==null&&

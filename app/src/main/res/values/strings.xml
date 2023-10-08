@@ -141,5 +141,12 @@
     <string name="btn_faculty_site"><u>Сайт факультета</u></string>
     <string name="btn_faculty_phone_pk"><u>Телефон приемной коммиссии факультета</u></string>
 
+    //ApplicationFormActivity2
+    <string name="no_specialization_selected">Ни одно из направлений подготовки не выбрано!</string>
+    <string name="directions_cannot_repeat">Направления подготовки не могут повторяться!</string>
+    <string name="same_priorities">Обнаружены одинаковые приоритеты! Распределите приоритеты так, чтобы они не повторялись</string>
+    <string name="max_priorities_reached">Нельзя добавить больше 6 приоритетов. Чтобы добавить новый, удалите какой-нибудь из существующих.</string>
+    <string name="nothing_selected">Ничего не выбрано!</string>
+
 
 </resources>

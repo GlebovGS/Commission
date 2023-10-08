@@ -15,7 +15,7 @@ import com.example.myapplication.R
 class PriorityAdapter(private val context:Context, private val list:MutableList<UserPriority>, private val listener: IPriorityAdapter):
     RecyclerView.Adapter<PriorityAdapter.SpecialtiesHolder>() {
 
-    val priorities = arrayListOf(1,2,3,4,5,6)
+    private val priorities = arrayListOf(1,2,3,4,5,6)
 
     class SpecialtiesHolder(item:View):RecyclerView.ViewHolder(item) {
 

@@ -15,9 +15,9 @@ class ApplicationFormActivity1 : AppCompatActivity() {
 
     private lateinit var binding: ActivityApplicationForm1Binding
 
-    val based_education = arrayListOf("Сред. общ.","Сред. проф.","Бакалавр","Специалист")
-    var education_programs = arrayListOf("")
-    var education_programs2 = arrayListOf("")
+    private val based_education = arrayListOf("Сред. общ.","Сред. проф.","Бакалавр","Специалист")
+    private var education_programs = arrayListOf("")
+    private var education_programs2 = arrayListOf("")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +34,7 @@ class ApplicationFormActivity1 : AppCompatActivity() {
                     2 -> education_programs = arrayListOf("Магистр")
                     3 -> education_programs = arrayListOf("Магистр")
                 }
-                addToSpinner(education_programs)
+                addToSpinner()
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {}
         }
@@ -59,7 +59,7 @@ class ApplicationFormActivity1 : AppCompatActivity() {
                     2 -> education_programs2 = arrayListOf("Магистр")
                     3 -> education_programs2 = arrayListOf("Магистр")
                 }
-                addToSpinner2(education_programs2)
+                addToSpinner2()
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {}
         }
@@ -90,12 +90,10 @@ class ApplicationFormActivity1 : AppCompatActivity() {
         }
    }
 
-
-
-    private fun addToSpinner(educationPrograms: ArrayList<String>) {
+    private fun addToSpinner() {
         binding.spinnerEducationProgram.adapter = ArrayAdapter(this,R.layout.simple_list_item_1,education_programs)
     }
-    private fun addToSpinner2(educationPrograms: ArrayList<String>) {
+    private fun addToSpinner2() {
         binding.spinnerEducationProgram2.adapter = ArrayAdapter(this,R.layout.simple_list_item_1,education_programs2)
     }
 
